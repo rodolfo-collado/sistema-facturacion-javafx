@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ni.edu.uam.sistemafacturacionjavafx.controller.MenuPrincipalController"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane prefHeight="600.0" prefWidth="900.0"
+            style="-fx-background-color: #f5f7fb;"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ni.edu.uam.sistemafacturacionjavafx.controller.MenuPrincipalController">
 
-</AnchorPane>
+    <top>
+        <VBox>
+            <MenuBar style="-fx-background-color: #17365d;">
+                <menus>
+                    <Menu mnemonicParsing="false" text="Archivo" style="-fx-text-fill: white;">
+                        <items>
+                            <MenuItem fx:id="mnuProductos" mnemonicParsing="false"
+                                      onAction="#abrirProductos" text="Productos" />
+                            <SeparatorMenuItem />
+                            <MenuItem fx:id="mnuSalir" mnemonicParsing="false"
+                                      onAction="#salir" text="Salir" />
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Catálogos" style="-fx-text-fill: white;">
+                        <items>
+                            <MenuItem fx:id="mnuCargos" mnemonicParsing="false"
+                                      onAction="#abrirCargos" text="Cargos" />
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Ayuda" style="-fx-text-fill: white;">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="Acerca de" />
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+
+            <ToolBar prefHeight="52.0" style="-fx-background-color: white; -fx-border-color: transparent transparent #d7deea transparent;">
+                <items>
+                    <Button fx:id="btnProductos" mnemonicParsing="false"
+                            onAction="#abrirProductos" text="Productos"
+                            style="-fx-background-color: #1f6feb; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 18;" />
+                    <Separator orientation="VERTICAL" />
+                    <Button fx:id="btnCargos" mnemonicParsing="false"
+                            onAction="#abrirCargos" text="Cargos"
+                            style="-fx-background-color: #e8f0fe; -fx-text-fill: #174ea6; -fx-font-weight: bold; -fx-padding: 8 18;" />
+                    <Separator orientation="VERTICAL" />
+                    <Button fx:id="btnSalir" mnemonicParsing="false"
+                            onAction="#salir" text="Salir"
+                            style="-fx-background-color: #eef1f6; -fx-text-fill: #26354a; -fx-font-weight: bold; -fx-padding: 8 18;" />
+                </items>
+            </ToolBar>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="12.0">
+            <children>
+                <Label text="Sistema de facturación"
+                       style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #17365d;" />
+                <Label text="Seleccione una opción del menú para comenzar."
+                       style="-fx-font-size: 15px; -fx-text-fill: #617087;" />
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: white; -fx-border-color: #d7deea transparent transparent transparent;">
+            <padding>
+                <Insets top="10.0" right="10.0" bottom="10.0" left="10.0" />
+            </padding>
+            <children>
+                <Label text="Programación de Aplicaciones de Escritorio" style="-fx-text-fill: #617087;" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
