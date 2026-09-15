@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="650.0" prefWidth="920.0"
+            style="-fx-background-color: #f5f7fb;"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ni.edu.uam.sistemafacturacionjavafx.controller.CargoController">
+
+    <top>
+        <VBox spacing="3.0" style="-fx-background-color: #17365d;">
+            <padding>
+                <Insets top="18.0" right="18.0" bottom="18.0" left="18.0" />
+            </padding>
+            <children>
+                <Label text="Cargos"
+                       style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" />
+                <Label text="Administración del catálogo de cargos."
+                       style="-fx-font-size: 13px; -fx-text-fill: #d7e6fb;" />
+            </children>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="18.0">
+            <padding>
+                <Insets top="22.0" right="46.0" bottom="22.0" left="46.0" />
+            </padding>
+            <children>
+                <Label text="Datos del cargo"
+                       style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #17365d;" />
+                <Separator />
+
+                <GridPane hgap="12.0" vgap="12.0" maxWidth="760.0" VBox.vgrow="NEVER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" minWidth="130.0" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <children>
+                        <Label text="Id:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="txtId" promptText="Ejemplo: 123"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                        <Label text="Nombre:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <TextField fx:id="txtNombre" promptText="Ejemplo: Manager"
+                                   GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                        <Label text="Descripción:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <TextField fx:id="txtDescripcion" promptText="Ejemplo: Maneja todo"
+                                   GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                    </children>
+                </GridPane>
+
+                <HBox alignment="CENTER" spacing="14.0">
+                    <children>
+                        <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" text="＋ Nuevo"
+                                style="-fx-background-color: #e8f0fe; -fx-text-fill: #174ea6; -fx-font-weight: bold; -fx-padding: 8 14;" />
+                        <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" text="Editar"
+                                style="-fx-background-color: #e8f0fe; -fx-text-fill: #174ea6; -fx-font-weight: bold; -fx-padding: 8 14;" />
+                        <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar"
+                                style="-fx-background-color: #fff0f0; -fx-text-fill: #c62828; -fx-font-weight: bold; -fx-padding: 8 14;" />
+                        <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#limpiar" text="Limpiar"
+                                style="-fx-background-color: #eef1f6; -fx-text-fill: #26354a; -fx-font-weight: bold; -fx-padding: 8 14;" />
+                        <Button fx:id="btnRegresar" mnemonicParsing="false" onAction="#regresar" text="Regresar"
+                                style="-fx-background-color: #eef1f6; -fx-text-fill: #26354a; -fx-font-weight: bold; -fx-padding: 8 14;" />
+                    </children>
+                </HBox>
+
+                <Separator />
+
+                <Label text="Cargos registrados"
+                       style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #17365d;" />
+                <TableView fx:id="tblCargos" prefHeight="270.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn text="Id" prefWidth="180.0" />
+                        <TableColumn text="Nombre" prefWidth="300.0" />
+                        <TableColumn text="Descripción" prefWidth="350.0" />
+                    </columns>
+                    <placeholder>
+                        <Label text="No hay cargos registrados." style="-fx-text-fill: #617087;" />
+                    </placeholder>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: white; -fx-border-color: #d7deea transparent transparent transparent;">
+            <padding>
+                <Insets top="10.0" right="10.0" bottom="10.0" left="10.0" />
+            </padding>
+            <children>
+                <Label text="Programación de Aplicaciones de Escritorio" style="-fx-text-fill: #617087;" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
