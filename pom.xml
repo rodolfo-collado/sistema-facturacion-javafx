@@ -76,7 +76,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                ni.edu.uam.sistemafacturacionjavafx/ni.edu.uam.sistemafacturacionjavafx.HelloApplication
+                                ni.edu.uam.sistemafacturacionjavafx/ni.edu.uam.sistemafacturacionjavafx.application.FacturacionApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
