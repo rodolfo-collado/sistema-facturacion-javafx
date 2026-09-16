@@ -41,7 +41,7 @@
                     </columnConstraints>
                     <children>
                         <Label text="Id:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
-                        <TextField fx:id="txtId" promptText="Ejemplo: 123"
+                        <TextField fx:id="txtId" promptText="Generado automáticamente"
                                    GridPane.rowIndex="0" GridPane.columnIndex="1" />
 
                         <Label text="Nombre:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
@@ -75,9 +75,9 @@
                        style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #17365d;" />
                 <TableView fx:id="tblCargos" prefHeight="270.0" VBox.vgrow="ALWAYS">
                     <columns>
-                        <TableColumn text="Id" prefWidth="180.0" />
-                        <TableColumn text="Nombre" prefWidth="300.0" />
-                        <TableColumn text="Descripción" prefWidth="350.0" />
+                        <TableColumn fx:id="colId" text="Id" prefWidth="180.0" />
+                        <TableColumn fx:id="colNombre" text="Nombre" prefWidth="300.0" />
+                        <TableColumn fx:id="colDescripcion" text="Descripción" prefWidth="350.0" />
                     </columns>
                     <placeholder>
                         <Label text="No hay cargos registrados." style="-fx-text-fill: #617087;" />

@@ -99,12 +99,12 @@
 
                 <TableView fx:id="tblProductos" prefHeight="230.0" VBox.vgrow="ALWAYS">
                     <columns>
-                        <TableColumn text="Código" prefWidth="110.0" />
-                        <TableColumn text="Nombre" prefWidth="220.0" />
-                        <TableColumn text="Categoría" prefWidth="150.0" />
-                        <TableColumn text="Precio" prefWidth="110.0" />
-                        <TableColumn text="Existencia" prefWidth="110.0" />
-                        <TableColumn text="Estado" prefWidth="100.0" />
+                        <TableColumn fx:id="colCodigo" text="Código" prefWidth="110.0" />
+                        <TableColumn fx:id="colNombre" text="Nombre" prefWidth="220.0" />
+                        <TableColumn fx:id="colCategoria" text="Categoría" prefWidth="150.0" />
+                        <TableColumn fx:id="colPrecio" text="Precio" prefWidth="110.0" />
+                        <TableColumn fx:id="colExistencia" text="Existencia" prefWidth="110.0" />
+                        <TableColumn fx:id="colEstado" text="Estado" prefWidth="100.0" />
                     </columns>
                     <placeholder>
                         <Label text="No hay productos registrados." style="-fx-text-fill: #617087;" />

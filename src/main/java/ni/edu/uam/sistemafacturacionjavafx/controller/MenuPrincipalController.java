@@ -37,6 +37,12 @@ public class MenuPrincipalController {
     }
 
     @FXML
+    private void acercaDe() {
+        new Alert(Alert.AlertType.INFORMATION,
+                "Sistema de Facturación\nProgramación de Aplicaciones de Escritorio").showAndWait();
+    }
+
+    @FXML
     private void salir() {
         Alert confirmacion = new Alert(Alert.AlertType.CONFIRMATION,
                 "¿Desea cerrar la aplicación?", ButtonType.OK, ButtonType.CANCEL);

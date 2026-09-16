@@ -1,6 +1,7 @@
 module ni.edu.uam.sistemafacturacionjavafx {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.xml;
     requires static lombok;
 
 
